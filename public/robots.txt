@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /threadline/privacy
+Disallow: /threadline/support
+Disallow: /billable/privacy
+Disallow: /billable/support
+Disallow: /callsheet/privacy
+Disallow: /callsheet/support
+
+Sitemap: https://veritas-software.net/sitemap-index.xml
