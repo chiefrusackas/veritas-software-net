@@ -1,0 +1,108 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import AppHero from '../../components/AppHero.astro';
+---
+<AppLayout
+  title="Threadline — Time Tracking for iOS"
+  description="Track billable time, organize projects, and export reports. Threadline is the focused time-tracking app for creative professionals."
+  heroBg="#2E2A4F"
+  accent="#FE5D31"
+>
+  <AppHero
+    heroBg="#2E2A4F"
+    accent="#FE5D31"
+    appName="THREADLINE"
+    eyebrow="// 01 Time Tracking"
+    heroTitle={["TRACK", "YOUR", "TIME."]}
+    accentLine="TIME."
+    subtitle="iPhone · iPad · Apple Watch"
+    pills={["Overview", "Timer", "Projects", "Reports", "Watch"]}
+    activePill="Overview"
+  />
+
+  <!-- // 02 Features -->
+  <section class="features-section">
+    <div class="section-inner">
+      <div class="section-label">// 02 Features</div>
+      <div class="features-grid">
+        <div class="features-list">
+          <div class="feature-item">
+            <span class="feature-num">01</span>
+            <div>
+              <div class="feature-title">TRACK TIME</div>
+              <p class="feature-body">Log billable hours with one tap. Background timers keep running while you switch apps — nothing falls through the cracks.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">02</span>
+            <div>
+              <div class="feature-title">ORGANIZE PROJECTS</div>
+              <p class="feature-body">Group entries by client and project. Instantly see where your time goes and how it maps to what you've quoted.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">03</span>
+            <div>
+              <div class="feature-title">EXPORT & REPORT</div>
+              <p class="feature-body">Generate clean time reports and send them directly to Billable for invoicing without double-entry.</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshots">
+          <div class="ph ph-iphone">
+            <span class="ph-label">iPhone — Timer View</span>
+          </div>
+          <div class="ph ph-ipad">
+            <span class="ph-label">iPad — Projects View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- // 03 On Your Wrist -->
+  <section class="watch-section">
+    <div class="section-inner">
+      <div class="section-label">// 03 On Your Wrist</div>
+      <div class="watch-grid">
+        <div class="ph ph-watch">
+          <span class="ph-label">Apple Watch</span>
+        </div>
+        <div class="watch-content">
+          <div class="feature-item">
+            <span class="feature-num">04</span>
+            <div>
+              <div class="feature-title">GLANCE AT YOUR WRIST</div>
+              <p class="feature-body">Check running timers, start and stop sessions, and review the day — all from your Apple Watch.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">05</span>
+            <div>
+              <div class="feature-title">LIVE ACTIVITY</div>
+              <p class="feature-body">Keep a live timer on your Lock Screen and Dynamic Island while you work.</p>
+            </div>
+          </div>
+          <div class="app-store-badge">
+            <div class="badge-icon">⬇</div>
+            <div class="badge-text">
+              <span class="badge-sub">Download on the</span>
+              <span class="badge-main">App Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="app-footer">
+    <div class="footer-links">
+      <a href="/threadline/privacy">Privacy Policy</a>
+      <span class="sep">·</span>
+      <a href="/threadline/support">Support</a>
+      <span class="sep">·</span>
+      <a href="/">← All Apps</a>
+    </div>
+    <span class="copyright">© {new Date().getFullYear()} Veritas Software</span>
+  </footer>
+</AppLayout>
