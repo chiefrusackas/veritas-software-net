@@ -31,21 +31,21 @@ import AppCard from '../components/AppCard.astro';
           name="THREADLINE"
           category="Time Tracking"
           href="/threadline/"
-          accent="#FE5D31"
+          accent="var(--tl-accent)"
           ghost="TL"
         />
         <AppCard
           name="BILLABLE"
           category="Invoicing"
           href="/billable/"
-          accent="#FF6600"
+          accent="var(--bl-accent)"
           ghost="BL"
         />
         <AppCard
           name="CALLSHEET"
           category="Production"
           href="/callsheet/"
-          accent="#2FD3DC"
+          accent="var(--cs-accent)"
           ghost="CS"
         />
       </div>
@@ -86,7 +86,7 @@ import AppCard from '../components/AppCard.astro';
     flex-direction: column;
     justify-content: flex-end;
     padding: 48px 40px;
-    border-right: 1px solid rgba(128, 255, 0, .2);
+    border-right: 1px solid color-mix(in srgb, var(--acid) 20%, transparent);
     background: var(--black);
   }
   .eyebrow {
@@ -94,7 +94,7 @@ import AppCard from '../components/AppCard.astro';
     font-size: 9px;
     letter-spacing: .22em;
     text-transform: uppercase;
-    color: rgba(128, 255, 0, .6);
+    color: color-mix(in srgb, var(--acid) 60%, transparent);
     margin-bottom: 14px;
   }
   .hero-title {
@@ -142,8 +142,8 @@ import AppCard from '../components/AppCard.astro';
     inset: 0;
     pointer-events: none;
     background-image:
-      linear-gradient(rgba(128, 255, 0, .04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(128, 255, 0, .04) 1px, transparent 1px);
+      linear-gradient(color-mix(in srgb, var(--acid) 4%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--acid) 4%, transparent) 1px, transparent 1px);
     background-size: 24px 24px;
   }
   .cards {
