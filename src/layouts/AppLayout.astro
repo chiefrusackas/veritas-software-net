@@ -16,6 +16,12 @@ const { title, description, heroBg, accent } = Astro.props;
 </Layout>
 
 <style>
+  /*
+   * All :global() rules below assume a .app-page ancestor that provides
+   * --page-bg and --page-accent via inline style. These vars will silently
+   * fall back to transparent/initial if used outside an .app-page wrapper.
+   * AppHero uses --hero-bg/--accent (same values, different internal names).
+   */
   .app-page {
     background: var(--page-bg);
     min-height: 100vh;

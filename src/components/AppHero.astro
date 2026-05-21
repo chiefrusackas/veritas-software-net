@@ -26,7 +26,7 @@ const {
   <div class="hero-content">
     <div class="eyebrow">{eyebrow}</div>
     <h1 class="hero-title">
-      {heroTitle.map((line, i) => (
+      {heroTitle.map((line) => (
         <span class:list={['title-line', { 'accent-line': line === accentLine }]}>
           {line}
         </span>
