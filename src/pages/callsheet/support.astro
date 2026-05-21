@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const title = 'Veritas Callsheet — Support';
+const description = 'Get help with Veritas Callsheet.';
+---
+
+<Layout title={title} description={description}>
+  <div class="wrap">
+
+    <header class="top">
+      <a href="/" class="brand">VERITAS <em>SOFTWARE</em></a>
+      <span class="tagline">Support</span>
+    </header>
+
+    <article class="support">
+      <h1>Veritas Callsheet Support</h1>
+      <p class="meta">Production call sheets for film and video crews</p>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Email <a href="mailto:support@veritas-software.net">support@veritas-software.net</a> and we'll respond within one business day.</p>
+      </section>
+
+      <section>
+        <h2>Privacy</h2>
+        <p><a href="/callsheet/privacy">Privacy Policy →</a></p>
+      </section>
+
+    </article>
+
+    <footer class="foot">
+      <span>© {new Date().getFullYear()} Veritas Software</span>
+    </footer>
+
+  </div>
+</Layout>
+
+<style>
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0 12px;
+  }
+
+  .brand {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: .08em;
+    text-decoration: none;
+    color: var(--offwhite);
+  }
+
+  .brand em {
+    color: var(--acid);
+    font-style: normal;
+  }
+
+  .tagline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  article.support h1 {
+    font-family: var(--font-display);
+    font-size: 48px;
+    letter-spacing: .04em;
+    margin: 40px 0 4px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  article.support h2 {
+    font-family: var(--font-cond);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin: 0 0 12px;
+  }
+
+  article.support p {
+    font-size: 15px;
+    max-width: 68ch;
+  }
+
+  article.support a {
+    color: var(--acid);
+  }
+
+  footer.foot {
+    border-top: 1px solid var(--line);
+    padding: 20px 0 40px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: .12em;
+  }
+</style>

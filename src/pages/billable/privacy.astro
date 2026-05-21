@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const title = 'Veritas Billable — Privacy Policy';
+const description = 'Privacy policy for Veritas Billable, a time-tracking and invoicing app for freelancers and studios.';
+---
+
+<Layout title={title} description={description}>
+  <div class="wrap">
+
+    <header class="top">
+      <a href="/" class="brand">VERITAS <em>SOFTWARE</em></a>
+      <span class="tagline">Privacy</span>
+    </header>
+
+    <article class="policy">
+      <h1>Veritas Billable Privacy Policy</h1>
+      <p class="meta">Effective: 2026-05-21</p>
+
+      <p>Veritas Billable is a time-tracking and invoicing app for freelancers and creative studios. A complete privacy policy will be published here before the app's App Store launch.</p>
+
+      <p>Questions: <a href="mailto:privacy@veritas-software.net">privacy@veritas-software.net</a></p>
+
+    </article>
+
+    <footer class="foot">
+      <span>© {new Date().getFullYear()} Veritas Software</span>
+    </footer>
+
+  </div>
+</Layout>
+
+<style>
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0 12px;
+  }
+
+  .brand {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: .08em;
+    text-decoration: none;
+    color: var(--offwhite);
+  }
+
+  .brand em {
+    color: var(--acid);
+    font-style: normal;
+  }
+
+  .tagline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  article.policy h1 {
+    font-family: var(--font-display);
+    font-size: 48px;
+    letter-spacing: .04em;
+    margin: 40px 0 4px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+  }
+
+  article.policy h2 {
+    font-family: var(--font-cond);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin: 40px 0 12px;
+  }
+
+  article.policy h3 {
+    font-family: var(--font-cond);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--muted);
+    margin: 24px 0 8px;
+  }
+
+  article.policy p,
+  article.policy li {
+    font-size: 15px;
+    max-width: 68ch;
+  }
+
+  article.policy ul {
+    padding-left: 1.4em;
+  }
+
+  article.policy ul li {
+    margin-bottom: 4px;
+  }
+
+  article.policy a {
+    color: var(--acid);
+  }
+
+  footer.foot {
+    border-top: 1px solid var(--line);
+    padding: 20px 0 40px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: .12em;
+  }
+</style>
