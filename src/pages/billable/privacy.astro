@@ -9,9 +9,104 @@ const description = 'Privacy policy for Veritas Billable, a time-tracking and in
     <h1>Veritas Billable Privacy Policy</h1>
     <p class="meta">Effective: 2026-05-21</p>
 
-    <p>Veritas Billable is a time-tracking and invoicing app for freelancers and creative studios. A complete privacy policy will be published here before the app's App Store launch.</p>
+    <p>Veritas Billable is a time-tracking and invoicing app for freelancers and
+    creative studios. This policy explains what data Billable collects, where
+    it's stored, and how to delete it.</p>
 
-    <p>Questions: <a href="mailto:privacy@veritas-software.net">privacy@veritas-software.net</a></p>
+    <h2>What we collect</h2>
+
+    <h3>Data you enter</h3>
+
+    <p>You enter business and client information through normal app use:</p>
+
+    <ul>
+      <li>Your business identity (name, address, phone, email, logo, signature).</li>
+      <li>Your clients (names, contact methods, addresses, notes).</li>
+      <li>Your time entries (duration, project, client, description, billable rate).</li>
+      <li>Your invoices (line items, rates, totals, payment status, due dates).</li>
+      <li>Your expenses (amount, category, date, client association, receipts).</li>
+    </ul>
+
+    <h3>Data Apple collects on our behalf</h3>
+
+    <p>If you subscribe to a paid tier, Apple processes your payment and provides
+    us a receipt token. We never see your payment method or card details.</p>
+
+    <h3>Optional cloud sync</h3>
+
+    <p>If you enable <strong>iCloud sync</strong>, your data syncs across your Apple devices
+    via Apple's CloudKit private database — accessible only with your iCloud
+    credentials. Veritas Billable cannot read your CloudKit records without
+    your consent.</p>
+
+    <h2>What we don't collect</h2>
+
+    <ul>
+      <li>No location data.</li>
+      <li>No analytics SDKs in v1.0.</li>
+      <li>No advertising identifiers.</li>
+      <li>No browsing or search history.</li>
+      <li>No health or sensitive personal data.</li>
+      <li>No biometric data. Face ID / Touch ID is processed on-device by Apple.</li>
+    </ul>
+
+    <h2>How we use the data</h2>
+
+    <ul>
+      <li>To render and edit your business records on your device.</li>
+      <li>To sync your data across your own devices via iCloud (if you enable it).</li>
+      <li>To verify your in-app subscription status with the App Store.</li>
+    </ul>
+
+    <p>We do <strong>not</strong>:</p>
+
+    <ul>
+      <li>Sell your data to third parties.</li>
+      <li>Share your data with advertisers.</li>
+      <li>Use your data to train machine-learning models.</li>
+      <li>Combine your data with data from other sources to identify you.</li>
+    </ul>
+
+    <h2>Where the data lives</h2>
+
+    <ul>
+      <li><strong>On your device</strong>: SwiftData local store, encrypted at rest by the iOS file system when your device is locked.</li>
+      <li><strong>In your iCloud private database</strong> (if you enable sync): managed by Apple under your iCloud credentials.</li>
+      <li><strong>With Apple</strong>: IAP receipt token (if you subscribed).</li>
+    </ul>
+
+    <h2>How to delete your data</h2>
+
+    <p><strong>In the app</strong>: Settings → Account → Delete Account. This:</p>
+
+    <ul>
+      <li>Removes your data from your device.</li>
+      <li>Marks your records in CloudKit for deletion (if iCloud sync was enabled).</li>
+      <li>Cancels any active in-app subscription on a forward-looking basis.</li>
+    </ul>
+
+    <p><strong>At the iCloud level</strong>: Settings → [your name] → iCloud →
+    Manage Account Storage → Billable → Delete Data.</p>
+
+    <h2>Children's privacy</h2>
+
+    <p>Veritas Billable is a business app, not intended for use by children
+    under 13. We do not knowingly collect data from children.</p>
+
+    <h2>Contact</h2>
+
+    <p>For privacy questions: <a href="mailto:privacy@veritas-software.net">privacy@veritas-software.net</a></p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>If we change this policy, we'll update the version + effective date at
+    the top of this document and note it in the app's release notes.</p>
+
+    <h2>Jurisdiction</h2>
+
+    <p>Veritas Billable is operated from the United States. By using the app,
+    you consent to your data being processed under U.S. law.</p>
+
   </article>
 </LegalLayout>
 
@@ -29,17 +124,6 @@ const description = 'Privacy policy for Veritas Billable, a time-tracking and in
     letter-spacing: .12em;
     text-transform: uppercase;
     margin: 0 0 40px;
-  }
-  article.policy p,
-  article.policy li {
-    font-size: 15px;
-    max-width: 68ch;
-  }
-  article.policy ul {
-    padding-left: 1.4em;
-  }
-  article.policy ul li {
-    margin-bottom: 4px;
   }
   article.policy h2 {
     font-family: var(--font-cond);
@@ -59,6 +143,17 @@ const description = 'Privacy policy for Veritas Billable, a time-tracking and in
     letter-spacing: .06em;
     color: var(--muted);
     margin: 24px 0 8px;
+  }
+  article.policy p,
+  article.policy li {
+    font-size: 15px;
+    max-width: 68ch;
+  }
+  article.policy ul {
+    padding-left: 1.4em;
+  }
+  article.policy ul li {
+    margin-bottom: 4px;
   }
   article.policy a {
     color: var(--acid);
