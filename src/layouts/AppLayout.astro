@@ -1,0 +1,223 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  heroBg: string;
+  accent: string;
+}
+const { title, description, heroBg, accent } = Astro.props;
+---
+<Layout {title} {description}>
+  <div class="app-page" style={`--page-bg: ${heroBg}; --page-accent: ${accent};`}>
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  .app-page {
+    background: var(--page-bg);
+    min-height: 100vh;
+  }
+
+  /* ── Section shared ──────────────────────────────── */
+  :global(.features-section) {
+    background: var(--page-bg);
+    padding: 72px 0;
+  }
+  :global(.watch-section) {
+    background: color-mix(in srgb, var(--page-bg) 92%, #000);
+    padding: 72px 0;
+  }
+  :global(.section-inner) {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  :global(.section-label) {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--page-accent);
+    margin-bottom: 40px;
+  }
+
+  /* ── Features grid ───────────────────────────────── */
+  :global(.features-grid) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  :global(.feature-item) {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  :global(.feature-num) {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: color-mix(in srgb, var(--page-accent) 50%, transparent);
+    flex-shrink: 0;
+    padding-top: 2px;
+    min-width: 24px;
+  }
+  :global(.feature-title) {
+    font-family: var(--font-cond);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--offwhite);
+    margin-bottom: 6px;
+  }
+  :global(.feature-body) {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(232, 230, 225, .65);
+    margin: 0;
+    max-width: 40ch;
+  }
+
+  /* ── Screenshot placeholders ─────────────────────── */
+  :global(.screenshots) {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+  }
+  :global(.ph) {
+    position: relative;
+    background: color-mix(in srgb, var(--page-bg) 80%, transparent);
+    border: 1px solid color-mix(in srgb, var(--page-accent) 12%, transparent);
+    overflow: hidden;
+  }
+  :global(.ph::before) {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%;
+    height: 1px;
+    background: color-mix(in srgb, var(--page-accent) 20%, transparent);
+  }
+  :global(.ph::after) {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: color-mix(in srgb, var(--page-accent) 20%, transparent);
+  }
+  :global(.ph-label) {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--page-accent) 40%, transparent);
+    pointer-events: none;
+  }
+  :global(.ph-iphone) {
+    width: 100px;
+    aspect-ratio: 9 / 19.5;
+    flex-shrink: 0;
+  }
+  :global(.ph-ipad) {
+    flex: 1;
+    aspect-ratio: 4 / 3;
+  }
+  :global(.ph-watch) {
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+  }
+
+  /* ── Watch grid ──────────────────────────────────── */
+  :global(.watch-grid) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  :global(.watch-content) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── App Store badge ─────────────────────────────── */
+  :global(.app-store-badge) {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid color-mix(in srgb, var(--page-accent) 25%, transparent);
+    padding: 14px 20px;
+    margin-top: 32px;
+    width: fit-content;
+    cursor: default;
+  }
+  :global(.badge-icon) {
+    font-size: 22px;
+    color: var(--page-accent);
+    line-height: 1;
+  }
+  :global(.badge-text) {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  :global(.badge-sub) {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  :global(.badge-main) {
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: .06em;
+    color: var(--offwhite);
+  }
+
+  /* ── App footer strip ────────────────────────────── */
+  :global(.app-footer) {
+    background: color-mix(in srgb, var(--page-bg) 92%, #000);
+    border-top: 1px solid color-mix(in srgb, var(--page-accent) 12%, transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+  }
+  :global(.footer-links) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  :global(.footer-links a) {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  :global(.footer-links a:hover) {
+    color: var(--page-accent);
+  }
+  :global(.footer-links .sep) {
+    color: var(--muted);
+    opacity: .4;
+  }
+  :global(.app-footer .copyright) {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: .12em;
+    color: rgba(232, 230, 225, .25);
+  }
+</style>

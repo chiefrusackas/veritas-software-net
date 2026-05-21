@@ -1,0 +1,83 @@
+---
+interface Props {
+  name: string;
+  category: string;
+  href: string;
+  accent: string;  /* hex value, e.g. '#FE5D31' */
+  ghost: string;   /* 2-letter initials, e.g. 'TL' */
+}
+const { name, category, href, accent, ghost } = Astro.props;
+---
+<div class="app-card" style={`--card-accent: ${accent};`}>
+  <div class="ghost" aria-hidden="true">{ghost}</div>
+  <div class="card-body">
+    <div class="card-name">{name}</div>
+    <div class="card-cat">{category} · iOS</div>
+    <div class="card-rule"></div>
+  </div>
+  <a {href} class="card-cta">LEARN MORE →</a>
+</div>
+
+<style>
+  .app-card {
+    padding: 18px 20px;
+    background: rgba(0, 0, 20, .5);
+    border: 1px solid color-mix(in srgb, var(--card-accent) 20%, transparent);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ghost {
+    position: absolute;
+    right: -4px;
+    top: -6px;
+    font-family: var(--font-display);
+    font-size: 96px;
+    line-height: 1;
+    letter-spacing: .04em;
+    color: color-mix(in srgb, var(--card-accent) 8%, transparent);
+    pointer-events: none;
+    user-select: none;
+  }
+  .card-body {
+    position: relative;
+  }
+  .card-name {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--offwhite);
+  }
+  .card-cat {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 225, .35);
+    margin-top: 3px;
+  }
+  .card-rule {
+    width: 28px;
+    height: 2px;
+    background: var(--card-accent);
+    margin-top: 10px;
+  }
+  .card-cta {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    text-decoration: none;
+    background: var(--card-accent);
+    color: #000;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: 20px;
+    position: relative;
+  }
+</style>
