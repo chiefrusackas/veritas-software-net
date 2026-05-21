@@ -1,0 +1,108 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import AppHero from '../../components/AppHero.astro';
+---
+<AppLayout
+  title="Billable — Invoicing for iOS"
+  description="Turn tracked time into professional invoices. Billable is the focused invoicing app for freelancers and creative studios."
+  heroBg="#243E35"
+  accent="#FF6600"
+>
+  <AppHero
+    heroBg="#243E35"
+    accent="#FF6600"
+    appName="BILLABLE"
+    eyebrow="// 01 Invoicing"
+    heroTitle={["BUILD", "YOUR", "BUSINESS."]}
+    accentLine="BUSINESS."
+    subtitle="iPhone · iPad · Apple Watch"
+    pills={["Overview", "Invoices", "Time", "Expenses", "Reports"]}
+    activePill="Overview"
+  />
+
+  <!-- // 02 Features -->
+  <section class="features-section">
+    <div class="section-inner">
+      <div class="section-label">// 02 Features</div>
+      <div class="features-grid">
+        <div class="features-list">
+          <div class="feature-item">
+            <span class="feature-num">01</span>
+            <div>
+              <div class="feature-title">CREATE INVOICES</div>
+              <p class="feature-body">Turn tracked time and expenses into professional invoices with your branding, line items, and payment terms.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">02</span>
+            <div>
+              <div class="feature-title">TRACK EXPENSES</div>
+              <p class="feature-body">Capture expenses on the go and add them to any client invoice without hunting for receipts.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">03</span>
+            <div>
+              <div class="feature-title">MONITOR PAYMENTS</div>
+              <p class="feature-body">Mark invoices paid, track outstanding balances, and see exactly what every client owes at a glance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshots">
+          <div class="ph ph-iphone">
+            <span class="ph-label">iPhone — Invoice View</span>
+          </div>
+          <div class="ph ph-ipad">
+            <span class="ph-label">iPad — Dashboard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- // 03 On Your Wrist -->
+  <section class="watch-section">
+    <div class="section-inner">
+      <div class="section-label">// 03 On Your Wrist</div>
+      <div class="watch-grid">
+        <div class="ph ph-watch">
+          <span class="ph-label">Apple Watch</span>
+        </div>
+        <div class="watch-content">
+          <div class="feature-item">
+            <span class="feature-num">04</span>
+            <div>
+              <div class="feature-title">INCOME AT A GLANCE</div>
+              <p class="feature-body">Check outstanding invoices and recent payments directly from your Apple Watch.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">05</span>
+            <div>
+              <div class="feature-title">YEAR-END REPORTS</div>
+              <p class="feature-body">Year-end revenue summaries and expense breakdowns — ready when your accountant asks.</p>
+            </div>
+          </div>
+          <div class="app-store-badge">
+            <div class="badge-icon">⬇</div>
+            <div class="badge-text">
+              <span class="badge-sub">Download on the</span>
+              <span class="badge-main">App Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="app-footer">
+    <div class="footer-links">
+      <a href="/billable/privacy">Privacy Policy</a>
+      <span class="sep">·</span>
+      <a href="/billable/support">Support</a>
+      <span class="sep">·</span>
+      <a href="/">← All Apps</a>
+    </div>
+    <span class="copyright">© {new Date().getFullYear()} Veritas Software</span>
+  </footer>
+</AppLayout>
