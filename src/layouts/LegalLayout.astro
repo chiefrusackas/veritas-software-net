@@ -1,0 +1,66 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  app: 'threadline' | 'billable' | 'callsheet';
+  pageType: 'privacy' | 'support';
+}
+const { title, description, pageType } = Astro.props;
+const pageLabel = pageType === 'privacy' ? 'Privacy' : 'Support';
+---
+<Layout title={title} description={description}>
+  <meta name="robots" content="noindex" slot="head" />
+  <div class="wrap">
+    <header class="top">
+      <a href="/" class="brand">VERITAS <em>SOFTWARE</em></a>
+      <span class="tagline">{pageLabel}</span>
+    </header>
+    <slot />
+    <footer class="foot">
+      <span>© {new Date().getFullYear()} Veritas Software</span>
+    </footer>
+  </div>
+</Layout>
+
+<style>
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0 12px;
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: .08em;
+    text-decoration: none;
+    color: var(--offwhite);
+  }
+  .brand em {
+    color: var(--acid);
+    font-style: normal;
+  }
+  .tagline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  footer.foot {
+    border-top: 1px solid var(--line);
+    padding: 20px 0 40px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: .12em;
+  }
+</style>
