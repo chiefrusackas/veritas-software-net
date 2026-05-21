@@ -1,0 +1,108 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import AppHero from '../../components/AppHero.astro';
+---
+<AppLayout
+  title="Callsheet — Production Management for iOS"
+  description="Build call sheets, manage crew, and run productions from your iPhone. Callsheet is the production app for film and video professionals."
+  heroBg="#06267B"
+  accent="#2FD3DC"
+>
+  <AppHero
+    heroBg="#06267B"
+    accent="#2FD3DC"
+    appName="CALLSHEET"
+    eyebrow="// 01 Production"
+    heroTitle={["RUN YOUR", "PRODUCTION."]}
+    accentLine="PRODUCTION."
+    subtitle="iPhone · iPad · Apple Watch"
+    pills={["Overview", "Call Sheets", "Crew", "Schedule", "Share"]}
+    activePill="Overview"
+  />
+
+  <!-- // 02 Features -->
+  <section class="features-section">
+    <div class="section-inner">
+      <div class="section-label">// 02 Features</div>
+      <div class="features-grid">
+        <div class="features-list">
+          <div class="feature-item">
+            <span class="feature-num">01</span>
+            <div>
+              <div class="feature-title">BUILD CALL SHEETS</div>
+              <p class="feature-body">Create professional call sheets in minutes. Add scenes, locations, call times, and crew — all in one place.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">02</span>
+            <div>
+              <div class="feature-title">MANAGE YOUR CREW</div>
+              <p class="feature-body">Keep contact info, rates, and notes for every crew member. Assign roles and call times without email chains.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">03</span>
+            <div>
+              <div class="feature-title">TALENT SCHEDULING</div>
+              <p class="feature-body">Organize talent call times, scenes, and location details in a clear, shareable schedule.</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshots">
+          <div class="ph ph-iphone">
+            <span class="ph-label">iPhone — Call Sheet</span>
+          </div>
+          <div class="ph ph-ipad">
+            <span class="ph-label">iPad — Crew View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- // 03 On Your Wrist -->
+  <section class="watch-section">
+    <div class="section-inner">
+      <div class="section-label">// 03 On Your Wrist</div>
+      <div class="watch-grid">
+        <div class="ph ph-watch">
+          <span class="ph-label">Apple Watch</span>
+        </div>
+        <div class="watch-content">
+          <div class="feature-item">
+            <span class="feature-num">04</span>
+            <div>
+              <div class="feature-title">DAY-OF VIEW</div>
+              <p class="feature-body">Check the shooting schedule, crew status, and scene notes from your Apple Watch — hands-free on set.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-num">05</span>
+            <div>
+              <div class="feature-title">SHARE INSTANTLY</div>
+              <p class="feature-body">Send call sheets directly from the app via email or shareable link. Crew gets what they need, when they need it.</p>
+            </div>
+          </div>
+          <div class="app-store-badge">
+            <div class="badge-icon">⬇</div>
+            <div class="badge-text">
+              <span class="badge-sub">Download on the</span>
+              <span class="badge-main">App Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="app-footer">
+    <div class="footer-links">
+      <a href="/callsheet/privacy">Privacy Policy</a>
+      <span class="sep">·</span>
+      <a href="/callsheet/support">Support</a>
+      <span class="sep">·</span>
+      <a href="/">← All Apps</a>
+    </div>
+    <span class="copyright">© {new Date().getFullYear()} Veritas Software</span>
+  </footer>
+</AppLayout>
