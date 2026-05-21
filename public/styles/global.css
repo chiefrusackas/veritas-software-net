@@ -1,15 +1,31 @@
 :root {
-  --black: #0A0A0A;
-  --ink: #141414;
-  --line: #262626;
+  /* backgrounds */
+  --black:    #000022;   /* nav-deep (was #0A0A0A) */
+  --ink:      #111133;   /* navy-mid */
+  --line:     #222255;   /* navy-panel */
   --offwhite: #E8E6E1;
-  --muted: #9A9893;
-  --acid: #C5FF3D;
-  --orange: #FF8137;
+  --muted:    #9A9893;
+
+  /* accents */
+  --acid:     #80FF00;   /* electric acid green (was #C5FF3D) */
+  --orange:   #FF6600;   /* safety orange (was #FF8137) */
+
+  /* app-specific accents */
+  --tl-accent:  #FE5D31;   /* Threadline coral */
+  --tl-cta:     #80FF00;   /* Threadline CTA = acid */
+  --bl-accent:  #FF6600;   /* Billable safety orange */
+  --cs-accent:  #2FD3DC;   /* Callsheet cyan */
+  --cs-cta:     #FF6600;   /* Callsheet CTA = orange */
+
+  /* homepage hero zones */
+  --hp-hero-right: #3A1A3F;
+  --hp-footer:     #2C0033;
+
+  /* fonts */
   --font-display: 'Bebas Neue', sans-serif;
-  --font-cond: 'Barlow Condensed', sans-serif;
-  --font-body: 'Barlow', sans-serif;
-  --font-mono: 'Space Mono', ui-monospace, Menlo, monospace;
+  --font-cond:    'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+  --font-mono:    'Space Mono', ui-monospace, Menlo, monospace;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body {
