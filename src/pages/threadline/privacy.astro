@@ -1,0 +1,258 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const title = 'Threadline — Privacy Policy';
+const description = 'Privacy policy for Threadline, a shop-management app for custom-decoration businesses. Local-first, with optional iCloud sync and an optional AI tier.';
+---
+
+<Layout title={title} description={description}>
+  <div class="wrap">
+
+    <header class="top">
+      <a href="/" class="brand">VERITAS <em>SOFTWARE</em></a>
+      <span class="tagline">Privacy</span>
+    </header>
+
+    <article class="policy">
+      <h1>Threadline Privacy Policy</h1>
+      <p class="meta">Effective: 2026-05-20</p>
+
+      <p>Threadline is a shop-management app for custom-decoration businesses. This
+      policy explains what data Threadline collects, where it's stored, and how
+      to delete it.</p>
+
+      <h2>What we collect</h2>
+
+      <h3>Data you enter</h3>
+
+      <p>You enter business information during onboarding and through normal app use:</p>
+
+      <ul>
+        <li>Your business identity (name, address, phone, email, EIN, logo, signature).</li>
+        <li>Your clients (names, contact methods, addresses, notes).</li>
+        <li>Your orders, line items, production status, photos, shipments.</li>
+        <li>Your catalog products, inventory items, invoices, expenses, payments.</li>
+        <li>Your mileage entries, asset depreciation records, and 1099 records.</li>
+        <li>AI "Ask My Business" questions and answers (stored locally as a queryable corpus).</li>
+      </ul>
+
+      <h3>Data Apple collects on our behalf</h3>
+
+      <p>If you sign in with Apple, we receive your Apple ID identifier (a stable
+      opaque string — not your real Apple ID email unless you explicitly share
+      it). We use this only to associate your account across your own devices
+      via Apple's Sign In With Apple service.</p>
+
+      <p>If you subscribe to the AI tier, Apple processes your payment and
+      provides us a receipt token. We never see your payment method.</p>
+
+      <h3>Optional cloud features</h3>
+
+      <p>If you enable the <strong>AI tier</strong> (a paid in-app subscription), Threadline may
+      send aggregated business data to our backend for two purposes:</p>
+
+      <ul>
+        <li>Year-end financial narrative composition — text-based summaries of your annual totals.</li>
+        <li>"Ask My Business" cloud fallback — only when the on-device Foundation Models runtime can't handle a query.</li>
+      </ul>
+
+      <p>Cloud requests are scoped to the minimum data needed to compose a
+      response. We do not retain queries beyond the response cycle.</p>
+
+      <p>If you enable <strong>iCloud sync</strong> (an Apple feature), your business data
+      syncs across your Apple devices via Apple's CloudKit private database.
+      CloudKit is a service Apple operates; we use the <strong>private</strong> database,
+      which means <strong>only you have access</strong> — Threadline cannot read your records
+      without your iCloud credentials.</p>
+
+      <h2>What we don't collect</h2>
+
+      <ul>
+        <li>No location data.</li>
+        <li>No analytics. We ship zero analytics SDKs in v1.0.</li>
+        <li>No advertising identifiers.</li>
+        <li>No browsing history or search history.</li>
+        <li>No health, fitness, or sensitive personal data.</li>
+        <li>No biometric data. Face ID / Touch ID is processed entirely on-device by Apple; we never see your face or fingerprint.</li>
+      </ul>
+
+      <h2>How we use the data</h2>
+
+      <ul>
+        <li>To render and edit your business records on your device.</li>
+        <li>To sync your data across your own devices via iCloud (if you enable it).</li>
+        <li>To compose AI-generated summaries when you ask (if you subscribe to the AI tier).</li>
+        <li>To verify your in-app subscription status with the App Store.</li>
+      </ul>
+
+      <p>We do <strong>not</strong>:</p>
+
+      <ul>
+        <li>Sell your data to third parties.</li>
+        <li>Share your data with advertisers.</li>
+        <li>Use your data to train machine-learning models.</li>
+        <li>Combine your data with data from other sources to identify you.</li>
+      </ul>
+
+      <h2>Where the data lives</h2>
+
+      <ul>
+        <li><strong>On your device</strong>: SwiftData local store (encrypted at rest by the iOS file system when your device is locked).</li>
+        <li><strong>In your iCloud private database</strong> (if you enable sync): managed by Apple under your iCloud credentials.</li>
+        <li><strong>On Threadline's backend</strong>: only when you use the AI tier, only for the duration of the request, not retained.</li>
+        <li><strong>With Apple</strong>: Sign In With Apple identifier (if you signed in), IAP receipt token (if you subscribed).</li>
+      </ul>
+
+      <h2>How to delete your data</h2>
+
+      <p><strong>In the app</strong>: Settings → Account → Delete Account. This:</p>
+
+      <ul>
+        <li>Removes your data from your device.</li>
+        <li>Marks your records in CloudKit for deletion (if iCloud sync was enabled).</li>
+        <li>Revokes the Sign In With Apple token (per App Store Guideline 5.1.1(v)).</li>
+        <li>Cancels any active in-app subscription on a forward-looking basis; to immediately stop billing, also confirm cancellation via App Store → Subscriptions.</li>
+      </ul>
+
+      <p><strong>At the iCloud level</strong>: Settings → [your name] → iCloud → Manage
+      Account Storage → Threadline → Delete Data removes the CloudKit private
+      database contents.</p>
+
+      <p><strong>At the App Store level</strong>: App Store → [your account] → Subscriptions
+      → Threadline AI Tier → Cancel.</p>
+
+      <p>We do not retain data after you delete your account. Backup snapshots
+      held by CloudKit and the App Store follow Apple's standard retention
+      windows (typically 30 days for billing records, plus any regulatory
+      hold periods Apple applies).</p>
+
+      <h2>Children's privacy</h2>
+
+      <p>Threadline is a business app, not intended for use by children under 13.
+      We do not knowingly collect data from children.</p>
+
+      <h2>Contact</h2>
+
+      <p>For privacy questions: <a href="mailto:privacy@veritas-software.net">privacy@veritas-software.net</a></p>
+
+      <p>For data subject requests (delete, export, correct): same address, and
+      use the in-app Settings → Account → Delete Account flow for fastest results.</p>
+
+      <h2>Changes to this policy</h2>
+
+      <p>If we change this policy, we'll update the version + effective date at
+      the top of this document and surface the change in the app's release notes.</p>
+
+      <h2>Jurisdiction</h2>
+
+      <p>Threadline is operated from the United States. By using the app, you
+      consent to your data being processed under U.S. law.</p>
+
+    </article>
+
+    <footer class="foot">
+      <span>© {new Date().getFullYear()} Veritas Software</span>
+    </footer>
+
+  </div>
+</Layout>
+
+<style>
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0 12px;
+  }
+
+  .brand {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: .08em;
+    text-decoration: none;
+    color: var(--offwhite);
+  }
+
+  .brand em {
+    color: var(--acid);
+    font-style: normal;
+  }
+
+  .tagline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  article.policy h1 {
+    font-family: var(--font-display);
+    font-size: 48px;
+    letter-spacing: .04em;
+    margin: 40px 0 4px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+  }
+
+  article.policy h2 {
+    font-family: var(--font-cond);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin: 40px 0 12px;
+  }
+
+  article.policy h3 {
+    font-family: var(--font-cond);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--muted);
+    margin: 24px 0 8px;
+  }
+
+  article.policy p,
+  article.policy li {
+    font-size: 15px;
+    max-width: 68ch;
+  }
+
+  article.policy ul {
+    padding-left: 1.4em;
+  }
+
+  article.policy ul li {
+    margin-bottom: 4px;
+  }
+
+  article.policy a {
+    color: var(--acid);
+  }
+
+  footer.foot {
+    border-top: 1px solid var(--line);
+    padding: 20px 0 40px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: .12em;
+  }
+</style>
