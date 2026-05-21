@@ -1,0 +1,23 @@
+:root {
+  --black: #0A0A0A;
+  --ink: #141414;
+  --line: #262626;
+  --offwhite: #E8E6E1;
+  --muted: #9A9893;
+  --acid: #C5FF3D;
+  --orange: #FF8137;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-cond: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, Menlo, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--black);
+  color: var(--offwhite);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
