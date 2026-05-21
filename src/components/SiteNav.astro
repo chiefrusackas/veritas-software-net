@@ -1,0 +1,62 @@
+---
+interface Props {
+  activePage?: 'threadline' | 'billable' | 'callsheet';
+}
+const { activePage } = Astro.props;
+---
+<nav class="site-nav">
+  <a href="/" class="brand">VERITAS</a>
+  <ul class="nav-links">
+    <li class="nav-tl">
+      <a href="/threadline/" class:list={['nav-link', { active: activePage === 'threadline' }]}>Threadline</a>
+    </li>
+    <li class="nav-bl">
+      <a href="/billable/" class:list={['nav-link', { active: activePage === 'billable' }]}>Billable</a>
+    </li>
+    <li class="nav-cs">
+      <a href="/callsheet/" class:list={['nav-link', { active: activePage === 'callsheet' }]}>Callsheet</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 52px;
+    background: var(--black);
+    border-bottom: 1px solid rgba(128, 255, 0, .18);
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: .12em;
+    text-decoration: none;
+    color: var(--offwhite);
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .55;
+    transition: opacity .15s;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    opacity: 1;
+  }
+  .nav-tl .nav-link { color: #FE5D31; }
+  .nav-bl .nav-link { color: #FF6600; }
+  .nav-cs .nav-link { color: #2FD3DC; }
+</style>

@@ -1,0 +1,102 @@
+---
+---
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="col-brand">
+      <div class="footer-wordmark">VERITAS</div>
+      <div class="footer-tagline">Software for creative businesses</div>
+    </div>
+    <div class="col-apps">
+      <div class="col-label">Apps</div>
+      <ul>
+        <li><a href="/threadline/" class="link-tl">Threadline</a></li>
+        <li><a href="/billable/" class="link-bl">Billable</a></li>
+        <li><a href="/callsheet/" class="link-cs">Callsheet</a></li>
+      </ul>
+    </div>
+    <div class="col-legal">
+      <div class="col-label">Legal</div>
+      <ul>
+        <li><a href="/threadline/privacy">Threadline Privacy</a></li>
+        <li><a href="/billable/privacy">Billable Privacy</a></li>
+        <li><a href="/callsheet/privacy">Callsheet Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} Veritas Software</span>
+    <span>Built with Astro · Cloudflare Pages</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--hp-footer);
+    border-top: 1px solid rgba(47, 211, 220, .2);
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 40px 40px;
+  }
+  .footer-wordmark {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: .08em;
+    color: var(--offwhite);
+    margin-bottom: 8px;
+  }
+  .footer-tagline {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .col-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--acid);
+    margin-bottom: 14px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  ul a {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .65;
+    transition: opacity .15s;
+  }
+  ul a:hover { opacity: 1; }
+  .link-tl { color: #FE5D31; }
+  .link-bl { color: #FF6600; }
+  .link-cs { color: #2FD3DC; }
+  .col-legal a { color: var(--muted); }
+  .footer-bottom {
+    border-top: 1px solid rgba(47, 211, 220, .15);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 40px;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: .12em;
+    color: var(--muted);
+    opacity: .65;
+  }
+</style>
